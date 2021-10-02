@@ -9,7 +9,7 @@ namespace eShop.UseCases.PluginInterfaces.DataStore
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetProducts(string filter);
         Product GetProduct(int id);
+        IEnumerable<Product> GetProducts(string filter = null);
     }
 }
