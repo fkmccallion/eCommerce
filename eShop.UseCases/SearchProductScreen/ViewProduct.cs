@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eShop.UseCases.SearchProductScreen
 {
-    public class ViewProduct
+    public class ViewProduct : IViewProduct
     {
         private readonly IProductRepository productRepository;
 

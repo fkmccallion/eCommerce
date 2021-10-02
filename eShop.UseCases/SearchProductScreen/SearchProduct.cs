@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eShop.UseCases.SearchProductScreen
 {
-    public class SearchProduct
+    public class SearchProduct : ISearchProduct
     {
         private readonly IProductRepository productRepository;
 
@@ -16,7 +16,7 @@ namespace eShop.UseCases.SearchProductScreen
         {
             this.productRepository = productRepository;
         }
-        public IEnumerable<Product> Execute(string filter)
+        public IEnumerable<Product> Execute(string filter = null)
         {
             return productRepository.GetProducts(filter);
         }
